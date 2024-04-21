@@ -51,9 +51,10 @@
             // openFileButton
             // 
             this.openFileButton.AllowDrop = true;
-            this.openFileButton.Location = new System.Drawing.Point(12, 12);
+            this.openFileButton.Location = new System.Drawing.Point(12, 15);
+            this.openFileButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.openFileButton.Name = "openFileButton";
-            this.openFileButton.Size = new System.Drawing.Size(128, 48);
+            this.openFileButton.Size = new System.Drawing.Size(128, 60);
             this.openFileButton.TabIndex = 0;
             this.openFileButton.TabStop = false;
             this.openFileButton.Text = "Drop/Open file";
@@ -68,9 +69,10 @@
             this.width.AutoSize = true;
             this.width.Checked = true;
             this.width.Enabled = false;
-            this.width.Location = new System.Drawing.Point(12, 66);
+            this.width.Location = new System.Drawing.Point(12, 82);
+            this.width.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.width.Name = "width";
-            this.width.Size = new System.Drawing.Size(62, 20);
+            this.width.Size = new System.Drawing.Size(70, 24);
             this.width.TabIndex = 1;
             this.width.TabStop = true;
             this.width.Text = "Width";
@@ -81,9 +83,10 @@
             // 
             this.height.AutoSize = true;
             this.height.Enabled = false;
-            this.height.Location = new System.Drawing.Point(12, 92);
+            this.height.Location = new System.Drawing.Point(12, 115);
+            this.height.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.height.Name = "height";
-            this.height.Size = new System.Drawing.Size(67, 20);
+            this.height.Size = new System.Drawing.Size(75, 24);
             this.height.TabIndex = 2;
             this.height.Text = "Height";
             this.height.UseVisualStyleBackColor = true;
@@ -91,10 +94,11 @@
             // inputSize
             // 
             this.inputSize.Enabled = false;
-            this.inputSize.Location = new System.Drawing.Point(12, 118);
+            this.inputSize.Location = new System.Drawing.Point(12, 148);
+            this.inputSize.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.inputSize.MaxLength = 6;
             this.inputSize.Name = "inputSize";
-            this.inputSize.Size = new System.Drawing.Size(42, 22);
+            this.inputSize.Size = new System.Drawing.Size(42, 27);
             this.inputSize.TabIndex = 3;
             this.inputSize.TabStop = false;
             this.inputSize.Text = "1";
@@ -102,17 +106,18 @@
             // 
             // pbImages
             // 
-            this.pbImages.Location = new System.Drawing.Point(146, 12);
+            this.pbImages.Location = new System.Drawing.Point(146, 15);
+            this.pbImages.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbImages.Name = "pbImages";
-            this.pbImages.Size = new System.Drawing.Size(336, 32);
+            this.pbImages.Size = new System.Drawing.Size(336, 40);
             this.pbImages.TabIndex = 4;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(418, 268);
+            this.linkLabel1.Location = new System.Drawing.Point(418, 335);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(64, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(73, 20);
             this.linkLabel1.TabIndex = 5;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Donate :3";
@@ -122,9 +127,10 @@
             // runButton
             // 
             this.runButton.Enabled = false;
-            this.runButton.Location = new System.Drawing.Point(12, 230);
+            this.runButton.Location = new System.Drawing.Point(12, 288);
+            this.runButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.runButton.Name = "runButton";
-            this.runButton.Size = new System.Drawing.Size(128, 48);
+            this.runButton.Size = new System.Drawing.Size(128, 60);
             this.runButton.TabIndex = 6;
             this.runButton.TabStop = false;
             this.runButton.Text = "Run";
@@ -135,9 +141,9 @@
             // 
             this.imagesState.AutoSize = true;
             this.imagesState.BackColor = System.Drawing.SystemColors.Control;
-            this.imagesState.Location = new System.Drawing.Point(146, 47);
+            this.imagesState.Location = new System.Drawing.Point(146, 59);
             this.imagesState.Name = "imagesState";
-            this.imagesState.Size = new System.Drawing.Size(158, 16);
+            this.imagesState.Size = new System.Drawing.Size(173, 20);
             this.imagesState.TabIndex = 7;
             this.imagesState.Text = "Images done: DONE/ALL";
             // 
@@ -145,44 +151,46 @@
             // 
             this.currentImageState.AutoSize = true;
             this.currentImageState.BackColor = System.Drawing.SystemColors.Control;
-            this.currentImageState.Location = new System.Drawing.Point(146, 115);
+            this.currentImageState.Location = new System.Drawing.Point(146, 144);
             this.currentImageState.Name = "currentImageState";
-            this.currentImageState.Size = new System.Drawing.Size(195, 16);
+            this.currentImageState.Size = new System.Drawing.Size(212, 20);
             this.currentImageState.TabIndex = 8;
             this.currentImageState.Text = "Current image: DONE_OBJ/ALL";
             // 
             // pbCurrentImage
             // 
-            this.pbCurrentImage.Location = new System.Drawing.Point(146, 80);
+            this.pbCurrentImage.Location = new System.Drawing.Point(146, 100);
+            this.pbCurrentImage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbCurrentImage.Name = "pbCurrentImage";
-            this.pbCurrentImage.Size = new System.Drawing.Size(336, 32);
+            this.pbCurrentImage.Size = new System.Drawing.Size(336, 40);
             this.pbCurrentImage.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 121);
+            this.label1.Location = new System.Drawing.Point(60, 151);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 16);
+            this.label1.Size = new System.Drawing.Size(36, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "Size";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 149);
+            this.label2.Location = new System.Drawing.Point(60, 186);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 16);
+            this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 12;
             this.label2.Text = "Border size";
             // 
             // borderSizeInput
             // 
             this.borderSizeInput.Enabled = false;
-            this.borderSizeInput.Location = new System.Drawing.Point(12, 146);
+            this.borderSizeInput.Location = new System.Drawing.Point(12, 182);
+            this.borderSizeInput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.borderSizeInput.MaxLength = 6;
             this.borderSizeInput.Name = "borderSizeInput";
-            this.borderSizeInput.Size = new System.Drawing.Size(42, 22);
+            this.borderSizeInput.Size = new System.Drawing.Size(42, 27);
             this.borderSizeInput.TabIndex = 11;
             this.borderSizeInput.TabStop = false;
             this.borderSizeInput.Text = "1";
@@ -191,19 +199,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(60, 177);
+            this.label3.Location = new System.Drawing.Point(60, 221);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 16);
+            this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 14;
             this.label3.Text = "Max objects";
             // 
             // maxObjectsInput
             // 
             this.maxObjectsInput.Enabled = false;
-            this.maxObjectsInput.Location = new System.Drawing.Point(12, 174);
+            this.maxObjectsInput.Location = new System.Drawing.Point(12, 218);
+            this.maxObjectsInput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.maxObjectsInput.MaxLength = 6;
             this.maxObjectsInput.Name = "maxObjectsInput";
-            this.maxObjectsInput.Size = new System.Drawing.Size(42, 22);
+            this.maxObjectsInput.Size = new System.Drawing.Size(42, 27);
             this.maxObjectsInput.TabIndex = 13;
             this.maxObjectsInput.TabStop = false;
             this.maxObjectsInput.Text = "16000";
@@ -212,19 +221,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(60, 205);
+            this.label4.Location = new System.Drawing.Point(60, 256);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 16);
+            this.label4.Size = new System.Drawing.Size(66, 20);
             this.label4.TabIndex = 16;
             this.label4.Text = "EL offset";
             // 
             // editorLayerOffsetInput
             // 
             this.editorLayerOffsetInput.Enabled = false;
-            this.editorLayerOffsetInput.Location = new System.Drawing.Point(12, 202);
+            this.editorLayerOffsetInput.Location = new System.Drawing.Point(12, 252);
+            this.editorLayerOffsetInput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.editorLayerOffsetInput.MaxLength = 6;
             this.editorLayerOffsetInput.Name = "editorLayerOffsetInput";
-            this.editorLayerOffsetInput.Size = new System.Drawing.Size(42, 22);
+            this.editorLayerOffsetInput.Size = new System.Drawing.Size(42, 27);
             this.editorLayerOffsetInput.TabIndex = 15;
             this.editorLayerOffsetInput.TabStop = false;
             this.editorLayerOffsetInput.Text = "0";
@@ -232,9 +242,9 @@
             // 
             // App
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 293);
+            this.ClientSize = new System.Drawing.Size(494, 366);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.editorLayerOffsetInput);
             this.Controls.Add(this.label3);
@@ -254,11 +264,12 @@
             this.Controls.Add(this.openFileButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "App";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "G2GD (none ver)";
+            this.Text = "G2GD 0.0.2";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.ResumeLayout(false);
             this.PerformLayout();

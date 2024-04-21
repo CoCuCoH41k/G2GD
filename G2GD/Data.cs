@@ -14,32 +14,36 @@ namespace geometrize_to_gd
         {
             max_objects = shapes.Count > max_objects ? max_objects : shapes.Count;
 
-            Obj[] list = new Obj[max_objects + 5]; // 0 index for solid black BG, size - 1..3 for borders. in all 5 empty Objs
+            Obj[] list = new Obj[max_objects + 4]; // 1..3 for borders. in all 4 empty Objs
 
             Console.WriteLine("Creating Obj[] array...");
             for (int index = 0; index < max_objects; index++)
             {
-                Shape shape = shapes[index];
-                decimal[] data = new decimal[shape.data.Count];
-                for (int index_data = 0; index_data < shape.data.Count; index_data++)
+                decimal[] data = new decimal[shapes[index].data.Count];
+                for (int index_data = 0; index_data < shapes[index].data.Count; index_data++)
                 {
-                    data[index_data] = shape.data[index_data];
+                    data[index_data] = shapes[index].data[index_data];
                 }
-                list[index + 1] = new Obj(shape.type, data, shape.color.ToArray<int>(), shape.score);
+
+                if (index == 0)
+                {
+                    list[index] = new Obj(shapes[index].type, data, shapes[index].color.ToArray<int>(), shapes[index].score, 998);
+                } else
+                {
+                    list[index] = new Obj(shapes[index].type, data, shapes[index].color.ToArray<int>(), shapes[index].score);
+                }
+                
             }
 
             Console.WriteLine("Applying scale...");
             for (int index = 0; index < list.Length; index++)
             {
-                Obj cur_obj = list[index];
-                if (cur_obj == null) continue;
+                if (list[index] == null) continue;
 
-                cur_obj.scale[0] *= scale;
-                cur_obj.scale[1] *= scale;
-                cur_obj.x *= scale;
-                cur_obj.y = (decimal)Math.Abs((float)(cur_obj.y * scale - yMax));
-
-                list[index] = cur_obj;
+                list[index].scale[0] *= scale;
+                list[index].scale[1] *= scale;
+                list[index].x *= scale;
+                list[index].y = (decimal)Math.Abs((float)(list[index].y * scale - yMax));
             }
             return list;
         }

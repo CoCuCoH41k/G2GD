@@ -26,7 +26,7 @@ namespace geometrize_to_gd
 
             Data objects = JsonSerializer.Deserialize<Data>(json);
 
-            int all_objs = objects.shapes.Count > settings.max_objects ? settings.max_objects + 5 : objects.shapes.Count + 5;
+            int all_objs = objects.shapes.Count > settings.max_objects ? settings.max_objects + 4 : objects.shapes.Count + 4;
             int done_objs = 0;
 
             if (objects.shapes.Count == 0)
@@ -58,7 +58,7 @@ namespace geometrize_to_gd
 
             decimal offset = Convert.ToInt32(Math.Round(settings.edge_weight));
 
-            list[0] = new Obj(1, new decimal[] { -offset, -offset, xMax + offset, yMax + offset }, new int[] { 0, 0, 0, 255 }, 0.1, 998);
+            
             list[list.Length - 4] = new Obj(1, new decimal[] { -offset, -offset, xMax + offset, 0 }, new int[] { 0, 0, 0, 255 }, 0.1, 998);
             list[list.Length - 3] = new Obj(1, new decimal[] { -offset, yMax, xMax + offset, yMax + offset }, new int[] { 0, 0, 0, 255 }, 0.1, 998);
             list[list.Length - 2] = new Obj(1, new decimal[] { -offset, 0, 0, yMax }, new int[] { 0, 0, 0, 255 }, 0.1, 998);
@@ -84,14 +84,16 @@ namespace geometrize_to_gd
 
                 done_objs++;
 
-                Console.WriteLine($" How's going: {(decimal) done_objs/ (decimal) all_objs}");
+                //Console.WriteLine($" How's going: {(decimal) done_objs/ (decimal) all_objs}");
 
                 local_app.set_pb_current(all_objs, done_objs);
             }
 
-            Console.WriteLine("Returning...");
+            Console.WriteLine("Returning data...");
 
             local_app.set_pb_images(1, 1);
+
+            
 
             return to_spwn;
         }

@@ -11,7 +11,7 @@ namespace G2GD
     public static class Program
     {
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
 

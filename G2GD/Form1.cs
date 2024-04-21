@@ -1,18 +1,8 @@
-﻿using G2GD.Properties;
+﻿
 using geometrize_to_gd;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+
 using System.Diagnostics;
-using System.Drawing;
 using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Text;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
@@ -100,7 +90,7 @@ namespace G2GD
         {
             decimal size;
 
-            if (width.Checked) { size = bg_object.data[2] / 30; } else { size = bg_object.data[3] / 30; }
+            if (width.Checked) { size = Math.Round(bg_object.data[2] / (decimal) 30, 3); } else { size = Math.Round(bg_object.data[3] / (decimal) 30, 3); }
 
             inputSize.Text = $"{size}";
         }
@@ -174,6 +164,8 @@ namespace G2GD
 
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
+                    Console.WriteLine("Saving file...");
+
                     Stream file = dialog.OpenFile();
                     StreamWriter writer = new StreamWriter(file);
 
@@ -184,8 +176,8 @@ namespace G2GD
                 }
 
                 if (_thread != null) {
-                    _thread.Abort();
                     _thread = null;
+                    Console.WriteLine("Done.\n");
                 }
             });
             
@@ -245,7 +237,7 @@ namespace G2GD
         {
             decimal size;
 
-            if (width.Checked) { size = bg_object.data[2] / 30; } else { size = bg_object.data[3] / 30; }
+            if (width.Checked) { size = Math.Round(bg_object.data[2] / (decimal)30, 3); } else { size = Math.Round(bg_object.data[3] / (decimal)30, 3); }
 
             inputSize.Text = $"{size}";
         }
